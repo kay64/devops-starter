@@ -4,12 +4,13 @@ variable "managed_by" {
   default     = "terraform"
 }
 
-variable "endpoint_public_access" {
-  type    = bool
-  default = false
+variable "additional_tags" {
+  description = "Additional tags. Defaults empty map."
+  type        = map(string)
+  default     = null
 }
 
-variable "endpoint_private_access" {
+variable "public" {
   type    = bool
-  default = true
+  default = false
 }

@@ -1,5 +1,5 @@
 variable "name" {
-  description = "Policy friendly name. Prefer underscored string."
+  description = "Policy friendly name. Prefer kebab string."
   type        = string
 }
 

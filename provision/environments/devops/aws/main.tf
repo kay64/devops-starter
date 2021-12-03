@@ -10,7 +10,11 @@ module "kubernetes" {
   name          = "demo-devops"
   subnet_ids    = module.network.private_subnet_ids
   instance_type = "t3.medium"
-  size_desired  = 3
-  size_max      = 5
-  size_min      = 3
+  size_desired  = 1
+  size_max      = 1
+  size_min      = 1
+}
+
+output "test" {
+  value = module.kubernetes.test
 }

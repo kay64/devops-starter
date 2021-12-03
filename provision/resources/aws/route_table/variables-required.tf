@@ -1,5 +1,5 @@
 variable "name" {
-  description = "Sub-network friendly name. Prefer underscored string."
+  description = "Sub-network friendly name. Prefer kebab string."
   type        = string
 }
 

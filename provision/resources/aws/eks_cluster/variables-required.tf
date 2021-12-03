@@ -1,9 +1,9 @@
 variable "name" {
-  description = "Cluster friendly name. Prefer underscored string."
+  description = "Cluster friendly name. Prefer kebab string."
   type        = string
 }
 
-variable "master_role_arn" {
+variable "role_arn" {
   description = "ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf."
   type        = string
 }

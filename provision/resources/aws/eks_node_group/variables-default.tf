@@ -3,3 +3,18 @@ variable "managed_by" {
   type        = string
   default     = "terraform"
 }
+
+variable "timeout_create" {
+  type    = string
+  default = "10m"
+}
+
+variable "timeout_update" {
+  type    = string
+  default = "10m"
+}
+
+variable "timeout_delete" {
+  type    = string
+  default = "10m"
+}

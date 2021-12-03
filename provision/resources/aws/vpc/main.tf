@@ -1,7 +1,7 @@
 resource "aws_vpc" "main" {
   tags = {
     "Name"                              = var.name
-    "ManagedBy"                         = "terraform"
+    "ManagedBy"                         = var.managed_by
     "kubernetes.io/cluster/${var.name}" = "owned"
   }
 

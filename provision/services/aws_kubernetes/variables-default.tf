@@ -1,4 +1,4 @@
-variable "iam_master_policy_arns" {
+variable "iam_control_plane_policy_arns" {
   type    = list(string)
   default = [
     "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
@@ -9,9 +9,7 @@ variable "iam_master_policy_arns" {
 variable "iam_worker_policy_arns" {
   type    = list(string)
   default = [
-    "arn:aws:iam::aws:policy/AmazonS3FullAccess",
     "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
-    "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
     "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
   ]
 }

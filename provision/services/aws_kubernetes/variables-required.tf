@@ -1,5 +1,5 @@
 variable "name" {
-  description = "Cluster friendly name. Prefer underscored string."
+  description = "Cluster friendly name. Prefer kebab string."
   type        = string
 }
 

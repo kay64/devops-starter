@@ -4,12 +4,7 @@ variable "managed_by" {
   default     = "terraform"
 }
 
-variable "endpoint_public_access" {
-  type    = bool
-  default = false
-}
-
-variable "endpoint_private_access" {
-  type    = bool
-  default = true
+variable "resolve_conflicts" {
+  type    = string
+  default = "OVERWRITE"
 }
