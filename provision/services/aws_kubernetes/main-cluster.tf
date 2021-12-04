@@ -13,7 +13,6 @@ module "cluster_cni_addon" {
   service_account_role_arn = module.iam_role_cni.arn
 }
 
-/* TODO: complete hardening
 module "cluster_node_group" {
   source            = "../../resources/aws/eks_node_group"
   ami_version       = var.ami_version
@@ -28,4 +27,3 @@ module "cluster_node_group" {
   subnet_ids        = var.subnet_ids
   ssh_key_pair_name = module.worker_key_pair.name
 }
-*/

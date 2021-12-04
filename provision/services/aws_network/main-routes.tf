@@ -11,8 +11,8 @@ module "route_table_association_public" {
   subnet_id      = module.public_subnet[count.index].id
 }
 
-module "route_table_association_internet_gateway" {
-  source         = "../../resources/aws/route_table_association_gateway"
+module "route_internet_gateway" {
+  source         = "../../resources/aws/route_gateway"
   gateway_id     = module.internet_gateway.id
   route_table_id = module.route_table_public.id
 }
