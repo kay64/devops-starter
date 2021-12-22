@@ -3,7 +3,12 @@ variable "subnet_ids" {
   type        = list(string)
 }
 
-variable "network_name" {
-  description = "Name of network."
+variable "network_id" {
+  description = "ID of VPC."
   type        = string
+}
+
+variable "allowed_cidr_blocks" {
+  description = "List of allowed network CIDR blocks."
+  type        = list(string)
 }

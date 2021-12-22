@@ -33,23 +33,35 @@ variable "size_desired" {
   type        = number
 }
 
-variable "ami_version" {
-  description = "Version of AMI image."
-  type        = string
-}
-
-variable "ami_type" {
-  description = "Type of AMI image."
-  type        = string
-}
-
-variable "instance_type" {
-  description = "EC2 instance type."
-  type        = string
-}
+#variable "ami_version" {
+#  description = "Version of AMI image."
+#  type        = string
+#}
+#
+#variable "ami_type" {
+#  description = "Type of AMI image."
+#  type        = string
+#}
+#
+#variable "instance_type" {
+#  description = "EC2 instance type."
+#  type        = string
+#}
 
 variable "ssh_key_pair_name" {
   description = "Key pair name to use for ssh access."
   type        = string
 }
 
+variable "allowed_security_group_ids" {
+  description = "IDs of security groups from which node will be allowed to be connected."
+  type        = list(string)
+}
+
+variable "launch_template_id" {
+  type = string
+}
+
+variable "launch_template_version" {
+  type = string
+}

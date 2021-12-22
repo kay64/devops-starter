@@ -12,7 +12,8 @@ resource "aws_subnet" "main" {
     "kubernetes.io/role/${local.prefix}elb"     = 1
   })
 
-  cidr_block        = var.cidr
-  vpc_id            = var.vpc_id
-  availability_zone = var.availability_zone
+  cidr_block              = var.cidr
+  vpc_id                  = var.vpc_id
+  availability_zone       = var.availability_zone
+  map_public_ip_on_launch = var.public
 }

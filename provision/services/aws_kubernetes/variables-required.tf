@@ -22,3 +22,8 @@ variable "size_desired" {
   description = "Desired number of nodes in group."
   type        = number
 }
+
+variable "allowed_security_group_ids" {
+  description = "Allowed SG IDs."
+  type        = list(string)
+}

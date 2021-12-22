@@ -3,3 +3,9 @@ variable "instance_managed_by" {
   type        = string
   default     = "autoscaling-group"
 }
+
+variable "launch_config_id" {
+  description = "ID of launch configuration."
+  type        = string
+  default     = null
+}

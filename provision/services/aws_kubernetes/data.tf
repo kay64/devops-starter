@@ -28,7 +28,15 @@ data "aws_iam_policy_document" "cni_role_trust_policy" {
   }
 }
 
-output "test" {
-  value = ""
+data "aws_ami" "main" {
+  most_recent = true
+  name_regex  = local.ami_names[local.ami_kind]
+
+  owners = ["amazon"]
+}
+
+data "aws_security_group" "cluster" {
+  vpc_id = data.aws_vpc.current.id
+  name = "eks-cluster-sg-${module.cluster.name}-*"
 }
 
